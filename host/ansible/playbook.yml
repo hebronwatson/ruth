@@ -1,0 +1,5 @@
+---
+- name: Provision a Vagrant environment for running a PHP Application
+  hosts: all
+  roles: 
+    - apt_install_deps

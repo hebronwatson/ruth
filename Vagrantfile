@@ -68,6 +68,12 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   
-	config.vm.provision "shell", path: "host/bash/setup.sh"
-  # config.vm.provision "ansible", path: "host/ansible/playbook.yml"
+  # Prepare the environment for interaction with ansible
+  config.vm.provision "shell", path: "host/bash/pre_ansible.sh"
+  
+  config.vm.provision "ansible_local" do |ansible|
+  	ansible.playbook = "host/ansible/playbook.yml"
+  end
+  
+  config.vm.provision "shell", path: "host/bash/setup.sh"
 end
