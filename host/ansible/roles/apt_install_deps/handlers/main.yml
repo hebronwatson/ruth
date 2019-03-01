@@ -1,0 +1,11 @@
+---
+- name: restart apache2
+  service:
+    name: apache2
+    enabled: yes
+    state: reloaded
+- name: restart mysql-server
+  service:
+    name: mysqld
+    enabled: yes
+    state: restarted     
