@@ -2,6 +2,7 @@
 # Purpose: carry out tasks to configure the vagrant image for development
 #			especially complicated tasks not suited to ansible
 
+<<<<<<< HEAD
 # set no unset variables for the script
 set -o nounset
 
@@ -10,6 +11,8 @@ set -o errexit
 
 
 
+=======
+>>>>>>> 9e70a4f94d55e23d6ebb7c65c10d68b97f1bf734
 # MY PERSONAL INFORMATION
 COMMITER_EMAIL='hebronwatson@gmail.com'
 COMMITER_NAME='Hebron Watson'
